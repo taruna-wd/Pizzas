@@ -1,0 +1,112 @@
+<% layout("/layouts/boilerplate")-%>
+
+<body>
+  <form class="row g-3 justify-content-center needs-validation"  novalidate method="post" action="/listings" enctype="multipart/form-data">
+    <h3 class="text-center new">Add new Pizza</h3>
+
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">Title</label>
+      <input
+        type="text"
+        name="listing[title]"
+        class="form-control"
+        id="inputAddress"
+        placeholder="Title "
+        required
+      />
+      
+      <div class="valid-feedback">
+        Title  is good!      </div>
+    </div>
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">description</label>
+      <textarea
+        type="text"
+        name="listing[description]"
+        class="form-control"
+        id="inputAddress"
+        placeholder="description"
+        required
+      >
+      
+      </textarea>
+      
+      <div class="invalid-feedback">
+        Description should be shorter
+              </div>
+    </div>
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">image</label>
+      <input
+        type="file"
+        name="listing[image]"
+        class="form-control"
+        id="inputAddress"
+        required
+      />
+    </div>
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">price</label>
+      <input
+        type="number"
+        name="listing[price]"
+        class="form-control"
+        id="inputAddress"
+        placeholder="price "
+        required
+      />
+    </div>
+
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">location</label>
+      <input
+        type="text"
+        name="listing[location]"
+        class="form-control"
+        id="inputAddress"
+        placeholder="location "
+        required
+      />
+      
+      <div class="invalid-feedback">
+        location should be correct!
+              </div>
+    </div>
+
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">country</label>
+      <input
+        type="text"
+        name="listing[country]"
+        class="form-control"
+        id="inputAddress"
+        placeholder="country "
+        required
+      />
+
+      
+      <div class="invalid-feedback">
+        Country should be according to location
+              </div>
+    </div>
+
+    <div class="col-8">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+  <!-- <form method="post"    action="/listings">
+
+    <input type="text" name="listing[title]" placeholder="enter title"> <br>
+    <textarea  placeholder = "enter description" name="listing[description]"> </textarea>
+    <br>
+    <input type="text" name="listing[image]" placeholder="enter image url  "> <br>
+    
+    <input type="number" name="listing[price]" placeholder="enter price"> <br>
+    <input type="text" name="listing[location]" placeholder="enter location"> <br>
+    <input type="text" name="listing[country]" placeholder="enter country"> <br>
+  <button type="submit">submit</button>
+
+    
+  </form> -->
+</body>

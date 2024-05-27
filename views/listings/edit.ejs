@@ -1,0 +1,114 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <div class="offset-2">
+    <form
+      class="row g-3 needs-validation"
+      novalidate
+      method="post"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      enctype="multipart/form-data"
+    >
+      <h3 class="new">Add new Pizza</h3>
+
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          value="<%= listing.title %> "
+          class="form-control"
+          id="inputAddress"
+          placeholder="Title "
+          required
+        />
+        <div class="valid-feedback">
+          Title is  good!
+        </div>
+    
+      </div>
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">description</label>
+        <textarea
+          type="text"
+          name="listing[description]"
+          class="form-control"
+          id="inputAddress"
+          placeholder="description "
+          required
+        >
+
+ <%= listing.description %></textarea
+        >
+        <div class="valid-feedback">
+          Description  should be shorter!
+        </div>
+    
+      </div>
+      <div class="col-8">
+        <label for="inputAddress" class="form-label"> upload new  image</label>
+        <input
+          type="file"
+          name="listing[image]"
+          class="form-control"
+          id="inputAddress"
+        />
+        
+    
+      </div>
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">price</label>
+        <input
+          type="number"
+          name="listing[price]"
+          value="<%= listing.price %>"
+          class="form-control"
+          id="inputAddress"
+          placeholder="price "
+          required
+        />
+        <div class="invalid-feedback">
+          Price must be number eg 1299 ,3400 etc.
+        </div>
+    
+      </div>
+
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          value="<%= listing.location %>"
+          class="form-control"
+          id="inputAddress"
+          placeholder="location "
+          required
+        />
+        <div class="invalid-feedback">
+          location should be correct!
+        </div>
+    
+      </div>
+
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">country</label>
+        <input
+          type="text"
+          name="listing[country]"
+          value="<%= listing.country %>"
+          class="form-control"
+          id="inputAddress"
+          placeholder="country "
+          required
+        />
+        <div class="invalid-feedback">
+          Country should be according to location
+                </div>
+    
+      </div>
+
+      <div class="col-8">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>

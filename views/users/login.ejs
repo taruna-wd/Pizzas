@@ -1,0 +1,25 @@
+
+
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <div class="row">
+        <div class="col-8 m-auto">
+    <form action="/login" method="post"  class="needs-validation" novalidate >
+       <h3 class="text-center">Log-In</h3>
+      <div class="mb-3">
+        <label for="Username" class="form-label">Username</label>
+        <input type="Username" name="username" class="form-control" id="Username" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text">We'll never share your Username with anyone else.</div>
+        <div class="valid-feedback">looks  good!      </div>
+      </div>
+        
+        <div class="mb-3">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password"  name="password"  class="form-control" id="Password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    </div>
+</body>
