@@ -141,7 +141,7 @@
     <% for(let listing of allListing){ %>
 
     <a href="/listings/<%= listing._id %>" class="
-      link ">
+      link "  data-type="<%= listing.types %>" data-category="<%= listing.category %>">
     
   
    <div class="card ">
